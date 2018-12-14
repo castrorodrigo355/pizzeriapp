@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Menu li {
+  display: inline-block;
+  text-align: center;
+  padding-right: 20px;
+}
+
+.Menu {
+  /* display: inline-block; */
+  /* padding: 1px; */
+  text-align: center;
+  overflow-x: scroll;
+  /* overflow-y: hidden; */
+  white-space: nowrap
+}
+
+.Menu div {
+  display: inline-block;
+  text-align: center;
+}
+
+.recipe {
+  /* width: 100%; */
+  border-radius: 60px;
+  /* text-decoration: none; */
+  box-shadow: 0 7px 6px rgba(0,0,0,0.15);
+}
+
+.recipe .bg {
+  display: block;
+  /* text-align: center; */
+  height: 60px;
+  width: 60px;
+  /* padding-bottom: 40%; */
+  /* background-position: 50% 50%; */
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+/* .recipe .info {
+  display: block;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+} */
