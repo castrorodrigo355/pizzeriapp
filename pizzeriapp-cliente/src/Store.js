@@ -10,6 +10,10 @@ const reducer = (state, action) => {
         return {
             ...state, pizzas : action.pizzas
         }
+    } else if(action.type === "GET_EMPANADAS"){
+        return {
+            ...state, empanadas : action.empanadas
+        }
     } else if(action.type === "GET_BEBIDAS"){
         return {
             ...state, bebidas : action.bebidas
@@ -35,4 +39,4 @@ const logger = store => next => action => {
     return result
 }
 
-export default createStore(reducer, {opciones: [], pizzas: [], bebidas: [], carrito: []}, applyMiddleware(logger, thunk))
+export default createStore(reducer, {opciones: [], pizzas: [], empanadas: [], bebidas: [], carrito: []}, applyMiddleware(logger, thunk))

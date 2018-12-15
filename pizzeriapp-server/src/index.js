@@ -22,6 +22,9 @@ app.use("/opciones", routerOpciones);
 const routerPizzas = require("./routes/pizzas");
 app.use("/pizzas", routerPizzas);
 // ----------------------------------------------------------
+const routerEmpanadas = require("./routes/empanadas");
+app.use("/empanadas", routerEmpanadas);
+// ----------------------------------------------------------
 const routerBebidas = require("./routes/bebidas");
 app.use("/bebidas", routerBebidas);
 // ----------------------------------------------------------

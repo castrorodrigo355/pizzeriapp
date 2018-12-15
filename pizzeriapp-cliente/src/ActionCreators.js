@@ -22,6 +22,16 @@ const obtenerPizzas = () => {
     )}
 }
 
+const obtenerEmpanadas = () => {
+    return (dispatch) => {
+        axios.get("http://localhost:3000/empanadas")
+            .then(response => dispatch({
+                type: "GET_EMPANADAS",
+                empanadas : response.data
+            })
+    )}
+}
+
 const obtenerBebidas = () => {
     return (dispatch) => {
         axios.get("http://localhost:3000/bebidas")
@@ -46,5 +56,4 @@ const eliminarProducto = index => {
     }
 }
 
-export {obtenerOpciones, obtenerPizzas, obtenerBebidas,
-        agregarAlCarrito, eliminarProducto}
+export {obtenerOpciones, obtenerPizzas, obtenerEmpanadas, obtenerBebidas, agregarAlCarrito, eliminarProducto}
