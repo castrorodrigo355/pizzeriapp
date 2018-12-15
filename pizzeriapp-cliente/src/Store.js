@@ -10,14 +10,18 @@ const reducer = (state, action) => {
         return {
             ...state, pizzas : action.pizzas
         }
-    } else if(action.type === "ADD_PIZZA"){
+    } else if(action.type === "GET_BEBIDAS"){
+        return {
+            ...state, bebidas : action.bebidas
+        }
+    } else if(action.type === "ADD_PRODUCTO"){
         return {
             ...state, carrito: state.carrito.concat(action.producto)
         }
     } else if(action.type === "REMOVE_PRODUCTO"){
         return {
-            ...state, carrito: state.carrito.filter(unProducto => {
-                return unProducto._id !== action.producto._id
+            ...state, carrito: state.carrito.filter((unProducto, i) => {
+                return i !== action.index
             })
         }
     }
@@ -31,4 +35,4 @@ const logger = store => next => action => {
     return result
 }
 
-export default createStore(reducer, {opciones: [], pizzas: [], carrito: []}, applyMiddleware(logger, thunk))
+export default createStore(reducer, {opciones: [], pizzas: [], bebidas: [], carrito: []}, applyMiddleware(logger, thunk))

@@ -22,6 +22,9 @@ app.use("/opciones", routerOpciones);
 const routerPizzas = require("./routes/pizzas");
 app.use("/pizzas", routerPizzas);
 // ----------------------------------------------------------
+const routerBebidas = require("./routes/bebidas");
+app.use("/bebidas", routerBebidas);
+// ----------------------------------------------------------
 app.get("/*", (req, res) => {
     res.end("Archivo no encontrado");
 });

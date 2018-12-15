@@ -22,18 +22,29 @@ const obtenerPizzas = () => {
     )}
 }
 
-const agregarAlCarrito = (unaPizza) => {
-    return {
-        type: "ADD_PIZZA",
-        producto: unaPizza
-    }
+const obtenerBebidas = () => {
+    return (dispatch) => {
+        axios.get("http://localhost:3000/bebidas")
+            .then(response => dispatch({
+                type: "GET_BEBIDAS",
+                bebidas : response.data
+            })
+    )}
 }
 
-const eliminarProducto = unProducto => {
+const agregarAlCarrito = (unProducto) => {
     return {
-        type: "REMOVE_PRODUCTO",
+        type: "ADD_PRODUCTO",
         producto: unProducto
     }
 }
 
-export {obtenerOpciones, obtenerPizzas, agregarAlCarrito, eliminarProducto}
+const eliminarProducto = index => {
+    return {
+        type: "REMOVE_PRODUCTO",
+        index: index
+    }
+}
+
+export {obtenerOpciones, obtenerPizzas, obtenerBebidas,
+        agregarAlCarrito, eliminarProducto}

@@ -93,8 +93,8 @@ const mapDispatchToProps = dispatch => {
     obtenerPizzas : () => { 
           dispatch(obtenerPizzas())
       },
-      agregarAlCarrito : (unaPizza) => {
-          dispatch(agregarAlCarrito(unaPizza))
+      agregarAlCarrito : (unProducto) => {
+          dispatch(agregarAlCarrito(unProducto))
       } 
   }
 }

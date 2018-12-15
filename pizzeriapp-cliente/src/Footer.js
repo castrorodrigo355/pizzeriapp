@@ -16,7 +16,7 @@ class Footer extends Component {
                                   <div style={{height: "14vh", width:"13vh", marginRight:"8px"}}>
                                       <div className="recipe">
                                             <span className="bg rounded-circle" style={{backgroundImage:`url(${unProducto.url})`}}>
-                                                    <button type="submit" onClick={() => this.props.eliminarProducto(unProducto)}></button>
+                                                    <button type="submit" onClick={() => this.props.eliminarProducto(i)}></button>
                                             </span>
                                       </div>
                                       <span className="info"><h6>{unProducto.nombre}</h6></span>
@@ -42,8 +42,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    eliminarProducto(unProducto){
-      dispatch(eliminarProducto(unProducto))
+    eliminarProducto(index){
+      dispatch(eliminarProducto(index))
   }}
 }
 
