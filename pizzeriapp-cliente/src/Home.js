@@ -9,74 +9,60 @@ class Home extends Component {
     this.props.obtenerPizzas()
   }
 
-  render() {
+    render() {
+        const pizzasGrandes = this.props.pizzas.filter(unaPizza => unaPizza.grande)
+        const pizzasChicas = this.props.pizzas.filter(unaPizza => !(unaPizza.grande))
     return (
-      <div>
-          <div className="card">
-              <div className="card-header">
-                  Pizzas Grandes
-              </div>
-              <div className="card-body">
-                  <div className="Menu">
-                      <div className="" style={{paddingLeft:"0px", paddingTop: "6px"}}>
-                          {
-                              this.props.pizzas.map((unaPizza, i) => {
-                                  return(
-                                      <div key={i}>
-                                        {
-                                          unaPizza.grande ?
-                                            <div style={{height: "14vh", width:"13vh", marginRight:"8px"}}>
-                                                <div className="recipe">
-                                                    <span className="bg rounded-circle" style={{backgroundImage:`url(${unaPizza.url})`}}
-                                                            onClick={() => this.props.agregarAlCarrito(unaPizza)}></span>
-                                                </div>
-                                                <span className="info"><h6>{unaPizza.nombre}</h6></span>
-                                                <span className="info"><h6>$: {unaPizza.precio}</h6></span>
-                                            </div>
-                                            :
-                                            ""
-                                        }
-                                      </div>
-                                  )
-                              })
-                          }
-                      </div>
-                  </div> 
-              </div>
+        <div>
+            <div className="card bg-transparent">
+                <div className="card-header" style={{padding:"0px"}}>
+                    <span className="info"><h5>Pizzas grandes</h5></span>
+                </div>
+                <div className="card-body" style={{padding:"0px"}}>
+                    <div className="Menu">
+                        <div style={{paddingLeft:"0px", paddingTop: "6px"}}>
+                            {
+                                pizzasGrandes.map((unaPizza, i) => {
+                                    return(
+                                        <div key={i} className="recipe" style={{height: "14vh", width:"13vh"}}>
+                                            <span className="bg rounded-circle" style={{padding:"50px", backgroundImage:`url(${unaPizza.url})`}}
+                                                    onClick={() => this.props.agregarAlCarrito(unaPizza)}></span>
+                                            <span className="info"><h6>$: {unaPizza.precio}</h6></span>
+                                            <span className="info"><h6>{unaPizza.nombre}</h6></span>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div> 
+                </div>
           </div>
 
-          <div className="card">
-              <div className="card-header">
-                  Pizzas Chicas
-              </div>
-              <div className="card-body">
-                  <div className="Menu">
-                      <div className="" style={{paddingLeft:"0px", paddingTop: "6px"}}>
-                          {
-                              this.props.pizzas.map((unaPizza, i) => {
-                                  return(
-                                      <div key={i}>
-                                        {
-                                          !unaPizza.grande ?
-                                            <div style={{height: "14vh", width:"13vh", marginRight:"8px"}}>
-                                                <div className="recipe">
-                                                    <span className="bg rounded-circle" style={{backgroundImage:`url(${unaPizza.url})`}}
-                                                            onClick={() => this.props.agregarAlCarrito(unaPizza)}></span>
-                                                </div>
-                                                <span className="info"><h6>{unaPizza.nombre}</h6></span>
-                                                <span className="info"><h6>$: {unaPizza.precio}</h6></span>
+            <div className="card bg-transparent">
+                <div className="card-header" style={{padding:"0px"}}>
+                    <span className="info"><h5>Pizzas Chicas</h5></span>
+                </div>
+                <div className="card-body" style={{padding:"0px"}}>
+                    <div className="Menu">
+                        <div className="" style={{paddingLeft:"0px", paddingTop: "6px"}}>
+                            {
+                                pizzasChicas.map((unaPizza, i) => {
+                                    return(
+                                        <div key={i} style={{height: "14vh", width:"13vh", marginRight:"8px"}}>
+                                            <div className="recipe">
+                                                <span className="bg rounded-circle" style={{backgroundImage:`url(${unaPizza.url})`}}
+                                                        onClick={() => this.props.agregarAlCarrito(unaPizza)}></span>
                                             </div>
-                                            :
-                                            ""
-                                        }
-                                      </div>
-                                  )
-                              })
-                          }
-                      </div>
-                  </div> 
-              </div>
-          </div>
+                                            <span className="info"><h6>{unaPizza.nombre}</h6></span>
+                                            <span className="info"><h6>$: {unaPizza.precio}</h6></span>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div> 
+                </div>
+            </div>
       </div>
     );
   }

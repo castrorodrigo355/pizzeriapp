@@ -7,7 +7,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className="" style={{height:"35vh", background:"orange"}}>
+      <div className="" style={{height:"35vh"}}>
           <div className="Menu">
               <div className="" style={{paddingLeft:"0px", paddingTop: "70px"}}>
                   {
