@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { eliminarProducto } from "./ActionCreators"
-import {connect} from "react-redux"
+import { connect } from "react-redux"
 import './App.css';
 
 class Footer extends Component {
 
   render() {
     return (
-      <div className="" style={{height:"35vh"}}>
-          <div className="Menu">
-              <div className="" style={{paddingLeft:"0px", paddingTop: "70px"}}>
+      <div className="border" style={{height:"20vh", zIndex:1}}>
+          <div className="Menu border jd-flex justify-content-center align-items-center" style={{paddingTop:"10px"}}>
+              <div className="" style={{paddingLeft:"0px"}}>
                   {
                       this.props.carrito.map((unProducto, i) => {
                           return(
@@ -28,7 +28,6 @@ class Footer extends Component {
                       })
                   }
               </div>
-              {/* {this.props.carrito.reduce((acum, x) => acum + x.precio, 0)} */}
           </div>
       </div>
     );

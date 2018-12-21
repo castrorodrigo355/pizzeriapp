@@ -13,7 +13,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="Menu" style={{height:"15vh", paddingTop:"8px", paddingLeft:"1px"}}>
+            <div className="Menu border" style={{height:"15vh", paddingTop:"8px", paddingLeft:"1px"}}>
                 <div>
                     {
                     this.props.opciones && this.props.opciones.map((opcion, i) => {

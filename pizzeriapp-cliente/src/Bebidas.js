@@ -5,9 +5,9 @@ import './App.css';
 
 class Bebidas extends Component {
 
-  componentWillMount(){
-    this.props.obtenerBebidas()
-  }
+    componentWillMount(){
+        this.props.obtenerBebidas()
+    }
 
   render() {
     return (

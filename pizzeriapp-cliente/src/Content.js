@@ -9,7 +9,7 @@ import './App.css';
 class Content extends Component {
   render() {
     return (
-      <div className="" style={{height:"55vh"}}>
+      <div className="border" style={{height:"65vh", maxHeight:"65vh"}}>
           <Switch>
               <Route exact path = "/" component = {Home}></Route>
               <Route path = "/empanadas" component = {Empanadas}></Route>
