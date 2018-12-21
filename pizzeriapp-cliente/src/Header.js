@@ -13,12 +13,12 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="Menu" style={{height:"15vh", paddingTop:"8px" ,background:"black"}}>
-                <ul>
+            <div className="Menu border" style={{height:"15vh", paddingTop:"8px" ,background:"black", paddingLeft:"1px"}}>
+                <div>
                     {
                     this.props.opciones && this.props.opciones.map((opcion, i) => {
                         return(
-                            <li key={i}>
+                            <div key={i}>
                                 <Link to={opcion.url}>
                                     <div style={{height: "14vh", width:"13vh"}} key={i}>
                                         <div className="recipe">
@@ -27,11 +27,11 @@ class Header extends Component {
                                         <span className="info"><h6>{opcion.titulo}</h6></span>
                                     </div>
                                 </Link>
-                            </li>
+                            </div>
                             )
                         })
                     }
-                </ul>
+                </div>
             </div>
         );
     }

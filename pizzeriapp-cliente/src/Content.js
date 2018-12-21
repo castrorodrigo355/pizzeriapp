@@ -3,6 +3,7 @@ import {Route, Switch} from "react-router-dom";
 import Home from './Home';
 import Empanadas from './Empanadas';
 import Bebidas from './Bebidas';
+import Pedido from './Pedido';
 import './App.css';
 
 class Content extends Component {
@@ -13,6 +14,7 @@ class Content extends Component {
               <Route exact path = "/" component = {Home}></Route>
               <Route path = "/empanadas" component = {Empanadas}></Route>
               <Route path = "/bebidas" component = {Bebidas}></Route>
+              <Route path = "/pedido" component = {Pedido}></Route>
           </Switch>
       </div>
     );

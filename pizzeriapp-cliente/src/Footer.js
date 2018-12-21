@@ -4,6 +4,7 @@ import {connect} from "react-redux"
 import './App.css';
 
 class Footer extends Component {
+
   render() {
     return (
       <div className="" style={{height:"35vh", background:"orange"}}>
@@ -27,7 +28,7 @@ class Footer extends Component {
                       })
                   }
               </div>
-              {this.props.carrito.reduce((acum, x) => acum + x.precio, 0)}
+              {/* {this.props.carrito.reduce((acum, x) => acum + x.precio, 0)} */}
           </div>
       </div>
     );
