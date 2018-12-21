@@ -13,7 +13,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="Menu border" style={{height:"15vh", paddingTop:"8px", paddingLeft:"1px"}}>
+            <div className="Menu fondoHeader" style={{height:"17vh", paddingTop:"8px", paddingLeft:"1px"}}>
                 <div>
                     {
                     this.props.opciones && this.props.opciones.map((opcion, i) => {
@@ -22,7 +22,8 @@ class Header extends Component {
                                 <Link to={opcion.url}>
                                     <div style={{height: "14vh", width:"13vh"}} key={i}>
                                         <div className="recipe">
-                                            <span className="bg rounded-circle" style={{backgroundImage:`url(${opcion.imagen})`}}></span>
+                                            {/* <img src={opcion.imagen} className="img-fluid rounded-circle" alt="Imágenes responsive"></img> */}
+                                            <span className="bg img-fluid rounded-circle" style={{backgroundImage:`url(${opcion.imagen})`}}></span>
                                         </div>
                                         <span className="info"><h6>{opcion.titulo}</h6></span>
                                     </div>

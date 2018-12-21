@@ -7,8 +7,8 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className="border" style={{height:"20vh", zIndex:1}}>
-          <div className="Menu border jd-flex justify-content-center align-items-center" style={{paddingTop:"10px"}}>
+      <div className="fondoFooter" style={{height:"20vh", zIndex:1}}>
+          <div className="Menu jd-flex justify-content-center align-items-center" style={{paddingTop:"10px"}}>
               <div className="" style={{paddingLeft:"0px"}}>
                   {
                       this.props.carrito.map((unProducto, i) => {

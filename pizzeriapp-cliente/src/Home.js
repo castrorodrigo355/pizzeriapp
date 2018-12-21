@@ -24,7 +24,7 @@ class Home extends Component {
                             {
                                 pizzasGrandes.map((unaPizza, i) => {
                                     return(
-                                        <div key={i} className="recipe" style={{height: "14vh", width:"13vh"}}>
+                                        <div key={i} className="recipe" style={{height: "14vh", width:"13vh", marginRight:"10px"}}>
                                             <span className="bg rounded-circle" style={{padding:"50px", backgroundImage:`url(${unaPizza.url})`}}
                                                     onClick={() => this.props.agregarAlCarrito(unaPizza)}></span>
                                             <span className="info"><h6>$: {unaPizza.precio}</h6></span>

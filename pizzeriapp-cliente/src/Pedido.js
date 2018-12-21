@@ -22,7 +22,7 @@ class Pedido extends Component {
     // })
 
     return (
-        <div className="border" style={{height:"10vh", maxHeight:"30vh"}}>
+        <div className="" style={{height:"10vh", maxHeight:"30vh"}}>
             <table className="table table-sm letrablanca animacion">
             <thead>
                 <tr className="alert alert-danger">
