@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { obtenerOpciones } from "./ActionCreators"
 import { connect } from "react-redux"
-// import items from "./menu";
 import './App.css';
 
 class Header extends Component {
@@ -13,7 +12,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="Menu fondoHeader" style={{height:"17vh", paddingTop:"8px", paddingLeft:"1px"}}>
+            <div className="Menu" style={{height:"17vh", paddingTop:"8px", paddingLeft:"1px"}}>
                 <div>
                     {
                     this.props.opciones && this.props.opciones.map((opcion, i) => {
@@ -48,10 +47,7 @@ const mapDispatchToProps = dispatch => {
     return {
         obtenerOpciones : () => { 
             dispatch(obtenerOpciones())
-        },
-        // obtenerMateria : (idMateria) => {
-        //     dispatch(obtenerMateria(idMateria))
-        // } 
+        }
     }
 }
 
